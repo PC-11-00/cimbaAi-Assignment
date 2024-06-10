@@ -41,7 +41,7 @@ dependencies {
     testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.13:1.3.0'
 
     // Local library
-    implementation files('/Users/pushpendrachoudhary/Desktop/Company Assignments/scala-library/lib/build/libs/scala-library-1.0-SNAPSHOT.jar')
+    implementation files('/Users/pushpendrachoudhary/Desktop/cimbaAi-Assignment/scala-library/lib/build/libs/scala-library-1.0-SNAPSHOT.jar')
 }
 
 test {
