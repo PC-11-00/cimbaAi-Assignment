@@ -6,9 +6,11 @@ The second page will have the history of previous requests.
 
 ## Architecture
 
+![Architecture](architecture.png)
+
 - **User:** Interacts with the React app.
 - **React App:** Serves the frontend interface.
-- **Backend - Java Spring Boot Service:** Handles the API requests and calls the Scala library for operations.
+- **Backend - Java Spring Boot Service (Final):** Handles the API requests and calls the Scala library for operations.
 - **Scala Library:** Performs core operations and interacts with the Postgres database.
 - **Postgres DB:** Stores the history of all requests.
 - **Python FastAPI Service:** Communicates with OpenAI or other LLM endpoints to summarize content.
@@ -18,31 +20,34 @@ The second page will have the history of previous requests.
 
 ### Create Three Services
 
-1. **Backend - Java Spring Boot**
+1. **Backend - Java Spring Boot (Final)**
    - Use Gradle for building.
    - A Spring Boot API server.
    - Calls the Scala library for all operations.
 
-2. **Scala**
+2. **Scala Library**
    - Use Gradle for building.
    - Functions as a library, called from the Java Spring Boot server.
    - Connected to the Postgres DB to log all request history.
 
-3. **Python**
+3. **Python FastAPI Service**
    - Use FastAPI.
    - Calls OpenAI or any other LLM endpoint to summarize contents and return them to the web.
 
 ### Create a React Website
+
 - A simple form application.
 - History page with all previous requests.
 
 ### User Interaction
+
 - The user submits a LinkedIn URL or any website URL.
 - The backend crawls the website and summarizes it using OpenAI or any LLM endpoint.
 
 ## Running the Project
 
 ### Prerequisites
+
 - Postgres database running.
 - Node.js and npm installed.
 - Java and Gradle installed.
@@ -52,13 +57,13 @@ The second page will have the history of previous requests.
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/your-repo/summariser-react-frontend.git
-    cd summariser-react-frontend
+    git clone https://github.com/PC-11-00/cimbaAi-Assignment.git
+    cd cimbaAi-Assignment
     ```
 
 2. **Install frontend dependencies:**
     ```sh
-    cd frontend
+    cd Summariser_React_Frontend
     npm install
     ```
 
@@ -68,9 +73,9 @@ The second page will have the history of previous requests.
     ```
 
 4. **Setup the backend services:**
-   - **Java Spring Boot:**
+   - **Java Spring Boot (Final):**
      ```sh
-     cd backend
+     cd ../Final
      ./gradlew bootRun
      ```
    - **Scala Library:**
@@ -78,9 +83,13 @@ The second page will have the history of previous requests.
 
 5. **Start the Python FastAPI service:**
     ```sh
-    cd python-service
+    cd ../FastApiService
     uvicorn main:app --reload
     ```
 
 6. **Ensure Postgres is running:**
    - Setup the database connection parameters in your services.
+
+## Repository Link
+
+For more details, visit the [GitHub repository](https://github.com/PC-11-00/cimbaAi-Assignment).
