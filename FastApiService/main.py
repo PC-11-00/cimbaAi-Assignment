@@ -39,7 +39,6 @@ class URLInput(BaseModel):
 @app.post("/api/summarize")
 async def summarize(input: URLInput):
     try:
-        print(input)
         logger.info(f"Received URL for summarization: {input.url}")
 
         # Fetch the text content of the URL

@@ -13,7 +13,6 @@ public class RequestService {
 
     private ScalaLibrary scalaLibrary = new ScalaLibrary();
     public Object summarize(String text){
-        System.out.println(text);
         try {
             Object res = this.scalaLibrary.summarize(text);
             return res;

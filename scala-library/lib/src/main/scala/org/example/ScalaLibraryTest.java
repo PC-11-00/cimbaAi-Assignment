@@ -36,6 +36,6 @@ class ScalaLibraryTest {
         String summary = scalaLibrary.summarize(text);
         assertNotNull(summary);
         assertTrue(summary.length() > 0);
-        println(summary);
+        
     }
 }

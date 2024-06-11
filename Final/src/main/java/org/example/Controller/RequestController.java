@@ -15,9 +15,9 @@ public class RequestController {
     private RequestService requestService = new RequestService();
     @PostMapping("/api/summarize")
     public Object summarize(@RequestBody Map<String, String> text) {
-        System.out.println(text);
+        
         String url = text.get("url");
-        System.out.println(url);
+        
         return requestService.summarize(url);
     }
 

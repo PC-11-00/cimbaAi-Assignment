@@ -1,0 +1,7 @@
+fastapi
+pydantic
+loguru  # A more modern logging library; recommended for logging
+openai
+python-dotenv
+requests
+beautifulsoup4

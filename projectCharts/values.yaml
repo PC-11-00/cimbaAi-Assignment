@@ -1,0 +1,42 @@
+postgres:
+  image:
+    repository: postgres
+    tag: latest
+  env:
+    POSTGRES_DB: postgres
+    POSTGRES_USER: root
+    POSTGRES_PASSWORD: mysql
+  service:
+    port: 5432
+
+fastapi:
+  image:
+    repository: FastApiService
+    tag: latest
+  service:
+    port: 8000
+  replicas: 2
+
+scala:
+  image:
+    repository: scala-library
+    tag: latest
+  service:
+    port: 8080
+  replicas: 2
+
+springboot:
+  image:
+    repository: Final
+    tag: latest
+  service:
+    port: 8080
+  replicas: 2
+
+react:
+  image:
+    repository: Summariser_React_Frontend
+    tag: latest
+  service:
+    port: 3000
+  replicas: 2
