@@ -1,0 +1,37 @@
+# File: charting-app/values.yaml
+
+frontend:
+  replicaCount: 1
+  image:
+    repository: react
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    port: 5000
+
+backend:
+  replicaCount: 1
+  image:
+    repository: springboot-backend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    port: 8080
+
+fastapi:
+  replicaCount: 1
+  image:
+    repository: fastapi
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    port: 8000
+
+postgresql:
+  replicaCount: 1
+  image:
+    repository: postgres
+    tag: "13.2"
+    pullPolicy: IfNotPresent
+  service:
+    port: 5432

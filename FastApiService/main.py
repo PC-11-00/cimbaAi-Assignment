@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 # Load environment variables
 load_dotenv()
-openai.api_key = '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'
+openai.api_key = ''
 
 # Initialize FastAPI app
 app = FastAPI()
